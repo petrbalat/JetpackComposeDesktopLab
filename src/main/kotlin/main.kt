@@ -8,13 +8,13 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 
 fun main() = Window {
-    var text by remember { mutableStateOf("Hello, World!") }
+    var text by remember { mutableStateOf(1) }
 
     MaterialTheme {
         Button(onClick = {
-            text = "Hello, Desktop!"
+            text += 1
         }) {
-            Text(text)
+            Text(text.toString())
         }
     }
 }
